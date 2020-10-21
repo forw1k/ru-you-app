@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ru-you-app/static/css/main.06e257a4.chunk.css",
+    "main.js": "/ru-you-app/static/js/main.c5679608.chunk.js",
+    "main.js.map": "/ru-you-app/static/js/main.c5679608.chunk.js.map",
+    "runtime-main.js": "/ru-you-app/static/js/runtime-main.eb7550ed.js",
+    "runtime-main.js.map": "/ru-you-app/static/js/runtime-main.eb7550ed.js.map",
+    "static/js/2.6934a705.chunk.js": "/ru-you-app/static/js/2.6934a705.chunk.js",
+    "static/js/2.6934a705.chunk.js.map": "/ru-you-app/static/js/2.6934a705.chunk.js.map",
+    "index.html": "/ru-you-app/index.html",
+    "precache-manifest.2e5ae843197cebe28e5bd9134475c0bd.js": "/ru-you-app/precache-manifest.2e5ae843197cebe28e5bd9134475c0bd.js",
+    "service-worker.js": "/ru-you-app/service-worker.js",
+    "static/css/main.06e257a4.chunk.css.map": "/ru-you-app/static/css/main.06e257a4.chunk.css.map",
+    "static/js/2.6934a705.chunk.js.LICENSE.txt": "/ru-you-app/static/js/2.6934a705.chunk.js.LICENSE.txt",
+    "static/media/icons.svg": "/ru-you-app/static/media/icons.b20ea88a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eb7550ed.js",
+    "static/js/2.6934a705.chunk.js",
+    "static/css/main.06e257a4.chunk.css",
+    "static/js/main.c5679608.chunk.js"
+  ]
+}
