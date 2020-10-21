@@ -1,6 +1,7 @@
 import React from "react";
 import IconsSVG from "./icons.svg";
 
+
 function Icons({ name, color, width, height, className }) {
   return (
     <svg
