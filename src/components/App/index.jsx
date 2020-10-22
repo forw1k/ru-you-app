@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import Palette from "../Palette";
-import Form from "../form";
+import Form from "../Form"
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const App = () => {

@@ -1,0 +1,19 @@
+.color-button{
+  width: 343px;
+  height: 50px;
+  background-color:#007AFF;
+  color: #fff;
+}
+.palette{
+  height: 70%;
+  &-list{
+    display: flex;
+    flex-wrap: wrap;
+    &__item{
+      width: 54px;
+      height: 54px;
+      border-radius: 5px;
+      margin: 0 25px 25px 0;
+    }
+  }
+}
