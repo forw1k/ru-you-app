@@ -13,24 +13,31 @@ const Palette = () => {
     <div className="palette">
       <ul className="palette-list">
         {palette.map((color, i) => (
-          <li key={i} className="palette-list__item" style={{ backgroundColor: color }}></li>
+          <li
+            key={i}
+            className="palette-list__item"
+            style={{ backgroundColor: color }}
+          ></li>
         ))}
       </ul>
-      <button
-        onClick={() =>
-          setShowColorPicker((showColorPicker) => !showColorPicker) && 
-          setIsVisible((isVisible) => !isVisible)
-        }
-        className="color-button"
-      >
-        {showColorPicker ? "" : "Добавить цвет"}
-      </button>
-      {showColorPicker && (
-        <ChromePicker
-          color={chosenColor}
-          onChange={(updatedColor) => setChosenColor(updatedColor.hex)}
-        />
-      )}
+      <div className="palette-controls">
+        <button
+          onClick={() =>
+            setShowColorPicker((showColorPicker) => !showColorPicker) &&
+            setIsVisible((isVisible) => !isVisible)
+          }
+          className="color-button"
+          style={setIsVisible ? {} : { display: "none" }}
+        >
+          {showColorPicker ? "" : "Добавить цвет"}
+        </button>
+        {showColorPicker && (
+          <ChromePicker
+            color={chosenColor}
+            onChange={(updatedColor) => setChosenColor(updatedColor.hex)}
+          />
+        )}
+      </div>
     </div>
   );
 };

@@ -16,4 +16,8 @@
       margin: 0 25px 25px 0;
     }
   }
+  &-controls{
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
