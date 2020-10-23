@@ -5,9 +5,21 @@ import "./styles.scss";
 
 const Palette = () => {
   const palette = useSelector((state) => state.palette);
+  const popover = {
+    position: "absolute",
+    zIndex: "2",
+  };
+  const cover = {
+    position: "fixed",
+    top: "0px",
+    right: "0px",
+    bottom: "0px",
+    left: "0px",
+  };
+  const [displayColorPicker, setDisplayColorPicker] = useState(false);
+  const handleClick = () => setDisplayColorPicker(!displayColorPicker);
+  const handleClose = () => setDisplayColorPicker(false);
   const [chosenColor, setChosenColor] = useState("#fff");
-  const [showColorPicker, setShowColorPicker] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
 
   return (
     <div className="palette">
@@ -21,22 +33,20 @@ const Palette = () => {
         ))}
       </ul>
       <div className="palette-controls">
-        <button
-          onClick={() =>
-            setShowColorPicker((showColorPicker) => !showColorPicker) &&
-            setIsVisible((isVisible) => !isVisible)
-          }
-          className="color-button"
-          style={setIsVisible ? {} : { display: "none" }}
-        >
-          {showColorPicker ? "" : "Добавить цвет"}
-        </button>
-        {showColorPicker && (
-          <ChromePicker
-            color={chosenColor}
-            onChange={(updatedColor) => setChosenColor(updatedColor.hex)}
-          />
+        {!displayColorPicker && (
+          <button className="color-button" onClick={handleClick}>
+            Добавить цвет
+          </button>
         )}
+        {displayColorPicker ? (
+          <div style={popover}>
+            <div style={cover} onClick={handleClose} />
+            <ChromePicker
+              color={chosenColor}
+              onChange={(updateColor) => setChosenColor(updateColor.hex)}
+            />
+          </div>
+        ) : null}
       </div>
     </div>
   );

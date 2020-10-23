@@ -1,10 +1,11 @@
 import React from "react";
 import "./styles.scss";
 import Palette from "../Palette";
-import Form from "../Form"
+import Form from "../Form";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const App = () => {
+  
   return (
     <div className="wrapper">
       <div className="container">
@@ -12,10 +13,10 @@ const App = () => {
           <Router>
             <div className="switch">
               <div className="switch__form">
-                <Link to="/">Форма</Link>
+                <Link to="/" className="switch__form-link">Форма</Link>
               </div>
               <div className="switch__palette">
-                <Link to="/Palette">Палитра</Link>
+                <Link to="/Palette" className="switch__form-link">Палитра</Link>
               </div>
             </div>
             <Switch>

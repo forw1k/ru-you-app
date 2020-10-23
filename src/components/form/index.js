@@ -68,7 +68,7 @@ const Form = () => {
         <label htmlFor="upload-button" className="upload__label">
           <span className="form__col-title">Фото</span>
           {image ? (
-            <img src={Image} alt="" width="60px" height="56px" />
+            <img src={image} alt="" width="60px" height="56px" />
           ) : (
             <Fragment>
               <div className="svg-img">

@@ -36,6 +36,7 @@ button {
     padding: 0 5px;
     width: 100%;
     color: #fff;
+    font-family: 'GothamPro-Bold', sans-serif;
   }
   &__textarea {
     background-color: #1f2223;
@@ -83,6 +84,8 @@ button {
 .upload__label{
   display: flex;
   flex-direction: column;
+  width: 122px;
+  height: 110px;
 }
 .upload-button{
   display: none;
@@ -98,12 +101,12 @@ button {
       outline: none;
       box-sizing: border-box;
     }
-  }
-  &__palette {
-    &:focus {
-      border-bottom: 1px solid #fff;
-      outline: none;
-      box-sizing: border-box;
+    &-link{
+      color: #fff;
+      text-decoration: none;
     }
   }
+}
+.active{
+  color: red;;
 }
