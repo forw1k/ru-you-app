@@ -7,15 +7,7 @@ export default function (state = initialState, action) {
     case ADD_COLOR:
       return [...state, action.color];
     case UPDATE_COLOR:
-      return state.map((item) => {
-        console.log('item',item)
-        console.log('action', action)
-        if (item.id === action.id) {
-          item.color = action.color;
-          return item;
-        }
-        return item;
-      });
+      return state.map((item) => (item.id === action.id) ? {...item, color: action.color} : item)
     default:
       return state;
   }
