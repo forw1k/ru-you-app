@@ -3,16 +3,22 @@ import { useForm } from "react-hook-form";
 import Icons from "../Icons";
 
 const Form = () => {
-  const [image, setImage] = useState('');
-  const [response, setResponse] = useState('');
+  const [image, setImage] = useState("");
+  const [response, setResponse] = useState("");
   const { register, handleSubmit } = useForm();
   const onSubmit = async (data) => {
+    const formId = JSON.stringify(Date.now());
+    const formContact = JSON.stringify([
+      data.name,
+      data.surname,
+      data.patronymic,
+    ]);
     const formData = new FormData();
-    formData.append("id", Date.now());
+    formData.append("id", formId);
     formData.append("image", data.image[0]);
-    formData.append("contact", [data.name, data.surname, data.patronymic]);
+    formData.append("contact", formContact);
 
-  const res = await fetch("https://test-job.pixli.app/send.php", {
+    const res = await fetch("https://test-job.pixli.app/send.php", {
       method: "POST",
       headers: {
         "Content-Type": "multipart/form-data",
@@ -20,9 +26,9 @@ const Form = () => {
       body: formData,
     });
 
-    if (res.ok) { 
+    if (res.ok) {
       let json = await res.json();
-      setResponse(JSON.stringify(json))
+      setResponse(JSON.stringify(json));
     } else {
       console.error("Ошибка HTTP: " + response.status);
     }
@@ -42,6 +48,7 @@ const Form = () => {
           name="name"
           className="form__input"
           ref={register}
+          required
         />
       </div>
       <div className="form__col">
@@ -52,6 +59,7 @@ const Form = () => {
           name="surname"
           className="form__input"
           ref={register}
+          required
         />
       </div>
       <div className="form__col">
@@ -108,6 +116,6 @@ const Form = () => {
       </div>
     </form>
   );
-}
+};
 
 export default Form;

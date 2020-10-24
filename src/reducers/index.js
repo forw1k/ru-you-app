@@ -1,12 +1,22 @@
-const initialState = {
-  palette: [
-    // { id: "1", color: "#111111" },
-    // { id: "2", color: "#555555" },
-    // { id: "3", color: "#123456" },
-    ['#123123']
-  ],
-};
+import { ADD_COLOR, UPDATE_COLOR } from "../actions";
+
+const initialState = [];
 
 export default function (state = initialState, action) {
-  return state;
+  switch (action.type) {
+    case ADD_COLOR:
+      return [...state, action.color];
+    case UPDATE_COLOR:
+      return state.map((item) => {
+        console.log('item',item)
+        console.log('action', action)
+        if (item.id === action.id) {
+          item.color = action.color;
+          return item;
+        }
+        return item;
+      });
+    default:
+      return state;
+  }
 }
