@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a5e2909eec0d1556def59e1566246a41",
+    "revision": "a11d10a858611de7069ab44d45872cbe",
     "url": "/ru-you-app/index.html"
   },
   {
-    "revision": "130294f2777d64c2a1ef",
-    "url": "/ru-you-app/static/css/main.f5bf872a.chunk.css"
+    "revision": "226c9b8c5fe376f1beea",
+    "url": "/ru-you-app/static/css/main.a0d12f56.chunk.css"
   },
   {
-    "revision": "868d3a998a286d0c5731",
-    "url": "/ru-you-app/static/js/2.7642e8be.chunk.js"
+    "revision": "278988c6eeea5c10b40b",
+    "url": "/ru-you-app/static/js/2.c75b8e54.chunk.js"
   },
   {
     "revision": "aa4100970f46d7e0ec2af84de3f2740b",
-    "url": "/ru-you-app/static/js/2.7642e8be.chunk.js.LICENSE.txt"
+    "url": "/ru-you-app/static/js/2.c75b8e54.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "130294f2777d64c2a1ef",
-    "url": "/ru-you-app/static/js/main.969611de.chunk.js"
+    "revision": "226c9b8c5fe376f1beea",
+    "url": "/ru-you-app/static/js/main.04bedc0d.chunk.js"
   },
   {
     "revision": "b826ba924b7c0c43b486",
@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ru-you-app/static/media/Gotham Pro Regular.cea9198b.woff"
   },
   {
-    "revision": "b20ea88a511a0e3e6dcccddff65b3fe2",
-    "url": "/ru-you-app/static/media/icons.b20ea88a.svg"
+    "revision": "e33e99d5b3ad0e6dae11b1b7ebc77d69",
+    "url": "/ru-you-app/static/media/icons.e33e99d5.svg"
   }
 ]);
