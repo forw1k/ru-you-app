@@ -82,7 +82,7 @@ const Form = () => {
               <div className="svg-img">
                 <Icons
                   name="uploadImg"
-                  color="#fff"
+                  color="rgba(235,235,245,0.6)"
                   width="60"
                   height="56"
                   className="svg-img__pic"
@@ -101,7 +101,7 @@ const Form = () => {
           ref={register}
         />
       </div>
-      <input type="submit" className="btn" />
+      <input type="submit" className="btn" value="Сохранить" />
       <div className="form__col">
         <div className="form__col-title">Response</div>
         <textarea

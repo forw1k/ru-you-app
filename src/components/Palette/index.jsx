@@ -1,14 +1,19 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useStore } from "react-redux";
 import { ChromePicker } from "react-color";
+import Icons from "../Icons";
 import "./styles.scss";
-import { addColorAction, updateColorAction } from "../../actions";
+import {
+  addColorAction,
+  updateColorAction,
+  deleteItemAction,
+} from "../../actions";
 
 const Palette = () => {
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
   const [chosenColor, setChosenColor] = useState("#fff");
-  const palette = useSelector((state) => state);
-  const [id, setId] = useState("");
+  const state = useStore().getState();
+  const [id, setId] = useState(JSON.stringify(Date.now()));
   const dispatch = useDispatch();
   const popover = {
     position: "absolute",
@@ -23,28 +28,44 @@ const Palette = () => {
   };
 
   const handleClick = () => {
-    setId(JSON.stringify(Date.now()));
     setDisplayColorPicker(!displayColorPicker);
     dispatch(addColorAction({ id, color: chosenColor }));
   };
   const handleClose = () => {
+    setId(JSON.stringify(Date.now()));
     setDisplayColorPicker(false);
-    dispatch(updateColorAction(id, chosenColor));
+    setChosenColor("#fff");
   };
+  const editColor = (id) => {
+    setDisplayColorPicker(!displayColorPicker);
+    setId(id);
+  };
+  const deleteItem = (id) => {
+    dispatch(deleteItemAction(id));
+  }
 
   return (
     <div className="palette">
       <ul className="palette-list">
-        {palette.map((item) => (
+        {state.map((item) => (
           <li
             key={item.id}
             className="palette-list__item"
             style={{ backgroundColor: item.color }}
-          ></li>
+            onClick={() => editColor(item.id)}
+          >
+            <div className="btn-close"
+            onClick={() => deleteItem(item.id)}>
+              <Icons
+                name="close"
+                className="btn-close__pic"
+              />
+            </div>
+          </li>
         ))}
       </ul>
       <div className="palette-controls">
-        <button className="color-button" onClick={handleClick}>
+        <button className="btn" onClick={handleClick}>
           Добавить цвет
         </button>
         {displayColorPicker ? (
@@ -54,7 +75,7 @@ const Palette = () => {
               color={chosenColor}
               onChange={(updateColor) => {
                 setChosenColor(updateColor.hex);
-                console.log(updateColor)
+                dispatch(updateColorAction(id, updateColor.hex));
               }}
             />
           </div>

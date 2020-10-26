@@ -35,7 +35,7 @@ button {
     padding: 0 12px;
     border-radius: 10px;
     width: 100%;
-    color: #fff;
+    color: rgba(235,235,245, 0.6);
     font-family: 'GothamPro-Bold', sans-serif;
   }
   &__textarea {
@@ -50,7 +50,7 @@ button {
     margin-bottom: 18px;
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: rgba(235,235,245, 0.6);
     &-title {
       padding: 0 0 5px 12px;
     }
@@ -109,6 +109,6 @@ button {
     }
   }
 }
-.active{
-  color: red;;
+.underline{
+  text-decoration: underline #fff;
 }
