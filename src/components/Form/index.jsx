@@ -8,15 +8,14 @@ const Form = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = async (data) => {
     const formId = JSON.stringify(Date.now());
-    const formContact = JSON.stringify([
-      data.name,
-      data.surname,
-      data.patronymic,
-    ]);
+
     const formData = new FormData();
+    formData.append("action", "send_data");
     formData.append("id", formId);
     formData.append("image", data.image[0]);
-    formData.append("contact", formContact);
+    formData.append("contact[name]", data.name);
+    formData.append("contact[surname]", data.surname);
+    formData.append("contact[patronymic]", data.patronymic)
 
     const res = await fetch("https://test-job.pixli.app/send.php", {
       method: "POST",

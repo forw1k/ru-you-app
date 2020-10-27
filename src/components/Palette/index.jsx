@@ -4,7 +4,7 @@ import { ChromePicker } from "react-color";
 import Icons from "../Icons";
 import "./styles.scss";
 import {
-  addColorAction,
+  addItemAction,
   updateColorAction,
   deleteItemAction,
 } from "../../actions";
@@ -18,6 +18,7 @@ const Palette = () => {
   const popover = {
     position: "absolute",
     zIndex: "2",
+    top: "200px"
   };
   const cover = {
     position: "fixed",
@@ -29,7 +30,7 @@ const Palette = () => {
 
   const handleClick = () => {
     setDisplayColorPicker(!displayColorPicker);
-    dispatch(addColorAction({ id, color: chosenColor }));
+    dispatch(addItemAction({ id, color: chosenColor }));
   };
   const handleClose = () => {
     setId(JSON.stringify(Date.now()));
@@ -42,7 +43,7 @@ const Palette = () => {
   };
   const deleteItem = (id) => {
     dispatch(deleteItemAction(id));
-  }
+  };
 
   return (
     <div className="palette">
@@ -54,32 +55,34 @@ const Palette = () => {
             style={{ backgroundColor: item.color }}
             onClick={() => editColor(item.id)}
           >
-            <div className="btn-close"
-            onClick={() => deleteItem(item.id)}>
-              <Icons
-                name="close"
-                className="btn-close__pic"
-              />
+            <div
+              className="btn-close"
+              onClick={() => {
+                deleteItem(item.id);
+              }}
+            >
+              <Icons name="close" className="btn-close__pic" />
             </div>
           </li>
         ))}
       </ul>
+      {displayColorPicker ? (
+        <div style={popover}>
+          <div style={cover} onClick={handleClose} />
+          <ChromePicker
+            className="chrome-picker"
+            color={chosenColor}
+            onChange={(updateColor) => {
+              setChosenColor(updateColor.hex);
+              dispatch(updateColorAction(id, updateColor.hex));
+            }}
+          />
+        </div>
+      ) : null}
       <div className="palette-controls">
         <button className="btn" onClick={handleClick}>
           Добавить цвет
         </button>
-        {displayColorPicker ? (
-          <div style={popover}>
-            <div style={cover} onClick={handleClose} />
-            <ChromePicker
-              color={chosenColor}
-              onChange={(updateColor) => {
-                setChosenColor(updateColor.hex);
-                dispatch(updateColorAction(id, updateColor.hex));
-              }}
-            />
-          </div>
-        ) : null}
       </div>
     </div>
   );

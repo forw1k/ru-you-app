@@ -1,9 +1,9 @@
-export const ADD_COLOR = "ADD_COLOR";
+export const ADD_ITEM = "ADD_ITEM";
 export const UPDATE_COLOR = "UPDATE_COLOR";
 export const DELETE_ITEM = "DELETE_ITEM"
 
-export const addColorAction = (color) => ({
-  type: ADD_COLOR,
+export const addItemAction = (color) => ({
+  type: ADD_ITEM,
   color,
 });
 
