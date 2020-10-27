@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/ru-you-app/static/css/main.a0d12f56.chunk.css",
-    "main.js": "/ru-you-app/static/js/main.04bedc0d.chunk.js",
-    "main.js.map": "/ru-you-app/static/js/main.04bedc0d.chunk.js.map",
+    "main.css": "/ru-you-app/static/css/main.7511dc39.chunk.css",
+    "main.js": "/ru-you-app/static/js/main.b39ce900.chunk.js",
+    "main.js.map": "/ru-you-app/static/js/main.b39ce900.chunk.js.map",
     "runtime-main.js": "/ru-you-app/static/js/runtime-main.eb7550ed.js",
     "runtime-main.js.map": "/ru-you-app/static/js/runtime-main.eb7550ed.js.map",
     "static/js/2.c75b8e54.chunk.js": "/ru-you-app/static/js/2.c75b8e54.chunk.js",
     "static/js/2.c75b8e54.chunk.js.map": "/ru-you-app/static/js/2.c75b8e54.chunk.js.map",
     "index.html": "/ru-you-app/index.html",
-    "precache-manifest.f055fb31b68eb7e0a34074f86b46487d.js": "/ru-you-app/precache-manifest.f055fb31b68eb7e0a34074f86b46487d.js",
+    "precache-manifest.a5e2539b659b51981815c6df27e18b8a.js": "/ru-you-app/precache-manifest.a5e2539b659b51981815c6df27e18b8a.js",
     "service-worker.js": "/ru-you-app/service-worker.js",
-    "static/css/main.a0d12f56.chunk.css.map": "/ru-you-app/static/css/main.a0d12f56.chunk.css.map",
+    "static/css/main.7511dc39.chunk.css.map": "/ru-you-app/static/css/main.7511dc39.chunk.css.map",
     "static/js/2.c75b8e54.chunk.js.LICENSE.txt": "/ru-you-app/static/js/2.c75b8e54.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/ru-you-app/static/media/Gotham Pro Regular.cea9198b.woff",
     "static/media/icons.svg": "/ru-you-app/static/media/icons.e33e99d5.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.eb7550ed.js",
     "static/js/2.c75b8e54.chunk.js",
-    "static/css/main.a0d12f56.chunk.css",
-    "static/js/main.04bedc0d.chunk.js"
+    "static/css/main.7511dc39.chunk.css",
+    "static/js/main.b39ce900.chunk.js"
   ]
 }

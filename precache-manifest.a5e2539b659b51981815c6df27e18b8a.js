@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a11d10a858611de7069ab44d45872cbe",
+    "revision": "062a22d568c232a19d3ff6b555b405b2",
     "url": "/ru-you-app/index.html"
   },
   {
-    "revision": "226c9b8c5fe376f1beea",
-    "url": "/ru-you-app/static/css/main.a0d12f56.chunk.css"
+    "revision": "e3ff70bf1c4fc624a036",
+    "url": "/ru-you-app/static/css/main.7511dc39.chunk.css"
   },
   {
     "revision": "278988c6eeea5c10b40b",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ru-you-app/static/js/2.c75b8e54.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "226c9b8c5fe376f1beea",
-    "url": "/ru-you-app/static/js/main.04bedc0d.chunk.js"
+    "revision": "e3ff70bf1c4fc624a036",
+    "url": "/ru-you-app/static/js/main.b39ce900.chunk.js"
   },
   {
     "revision": "b826ba924b7c0c43b486",
