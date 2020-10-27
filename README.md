@@ -3,7 +3,7 @@
 
 *$* git clone https://github.com/forw1k/ru-you-app.git
 
-*$* cd pet-shop
+*$* cd ru-you-app
 
 *$* npm install
 
